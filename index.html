@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Odin Library</title>
+    <script src="library.js" defer></script>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+    <div class="main-container">
+        <div class="main-header">
+            <p class="header-txt">Odin Library</p>
+            <p class="author-txt">By Thomas McDonald</p>
+        </div>
+        <div class="main-content">
+            <button id="add-book-btn">ADD BOOK</button>
+            <dialog class="modal-form">
+                <div class="modal-content">
+                    <h1 class="form-header">New Book</h1>
+                    <form id="signup-form" method="dialog">     
+                        <div class="input-group">
+                            <label for="book_name">Book Title:</label>
+                            <input type="text" id="book_name">
+                        </div>
+                        <div class="input-group">
+                            <label for="author">Author:</label>
+                            <input type="text" id="author">
+                        </div>
+                        <div class="input-group">
+                            <label for="page_num">Number of pages:</label>
+                            <input type="text" id="page_num">
+                        </div>
+                    </form>
+                    <button id="close-modal-btn">CANCEL</button>
+                    <button id="confirm-book-btn">CONFIRM</button>
+                </div>
+            </dialog>
+            <div class="books-grid">
+                
+            </div>
+        </div>
+    </div>
+</body>
+</html>
