@@ -8,38 +8,48 @@
     <link rel="stylesheet" type="text/css" href="styles.css">
 </head>
 <body>
-    <div class="main-container">
-        <div class="main-header">
-            <p class="header-txt">Odin Library</p>
-            <p class="author-txt">By Thomas McDonald</p>
-        </div>
-        <div class="main-content">
-            <button id="add-book-btn">ADD BOOK</button>
-            <dialog class="modal-form">
-                <div class="modal-content">
-                    <h1 class="form-header">New Book</h1>
-                    <form id="signup-form" method="dialog">     
-                        <div class="input-group">
-                            <label for="book_name">Book Title:</label>
-                            <input type="text" id="book_name">
-                        </div>
-                        <div class="input-group">
-                            <label for="author">Author:</label>
-                            <input type="text" id="author">
-                        </div>
-                        <div class="input-group">
-                            <label for="page_num">Number of pages:</label>
-                            <input type="text" id="page_num">
-                        </div>
-                    </form>
-                    <button id="close-modal-btn">CANCEL</button>
-                    <button id="confirm-book-btn">CONFIRM</button>
-                </div>
-            </dialog>
-            <div class="books-grid">
-                
-            </div>
+    <div class="main-header">
+        <p class="header-txt">Odin Library</p>
+    </div>
+    <div class="main-content">
+        <button class="add-book-btn">New Book</button>
+        <div class="books-grid">
+            
         </div>
     </div>
 </body>
+<dialog class="modal-popup">
+    <div class="modal-content">
+        <h1 class="form-header">New Book</h1>
+        <form id="modal-form" method="dialog">     
+            <div class="input-group">
+                <label for="book_title">Book Title:</label>
+                <input type="text" id="book_title" name="book_name" maxlength="20" required>
+            </div>
+            <div class="input-group">
+                <label for="author">Author:</label>
+                <input type="text" id="author" name="author" maxlength="20" required>
+            </div>
+            <div class="input-group">
+                <label for="page_num">Number of pages:</label>
+                <input type="number" id="page_num" name="page_num" min="1" max="20000" required>
+            </div>
+            <div class="input-group">
+                <p class="radio-header">Have you read this book?</p>
+                <div class="radio-container">
+                    <div class="radio-group">
+                        <label for="has_read">Yes</label>
+                        <input type="radio" id="has_read" value="Yes" name="read_choice" required>
+                    </div>
+                    <div class="radio-group">
+                        <label for="not_read">No</label>
+                        <input type="radio" id="not_read" value="No" name="read_choice" required>
+                    </div>
+                </div>
+            </div>
+        </form>
+        <button class="close-modal-btn">Cancel</button>
+        <input class="confirm-btn" type="submit" form="modal-form" value="Confirm">
+    </div>
+</dialog>
 </html>
